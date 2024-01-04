@@ -1,0 +1,20 @@
+# configure server port
+server:
+  port: 8080
+
+# configure datasource and jpa
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: testdemo
+    password: testdemo@123
+    url: jdbc:postgresql://localhost:5432/dbftest
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+# there are 3 ways for auditing
+# 1. Audit with JPA
+# 2. Audit with Hibernate
+# 3. Audit with Spring Data JPA (integrated with Spring Security)
